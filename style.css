@@ -1,0 +1,49 @@
+/* Village Legacy – Webseite (Farben und Schriften wie im Spiel) */
+:root{
+  --bg:#EEF5E6; --surface:#FFFFFF; --ink:#1E2A1B; --muted:#56654F; --line:#D5E0C9;
+  --green:#3C8A3F; --green-dark:#2C6A2F; --wood:#B8712F; --sky:#2F6FB5;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#111710; --surface:#1A2217; --ink:#E4ECDD; --muted:#9BAA92; --line:#2B3627; --green:#62B861; --green-dark:#4E9D4D; --wood:#E09A55; --sky:#7DB1EA; color-scheme:dark; }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.6}
+a{color:var(--sky)}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand img{width:44px;height:44px;border-radius:11px}
+.brand span{font-family:"Lilita One","Nunito",sans-serif;font-size:22px}
+.lang{font-weight:800;text-decoration:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:6px 12px;border-radius:999px;font-size:14px}
+h1,h2{font-family:"Lilita One","Nunito",sans-serif;font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:28px 0 40px}
+.hero h1{font-size:clamp(34px,6vw,56px);color:var(--green)}
+.hero p.lead{font-size:20px;color:var(--muted);margin:14px 0 22px;max-width:34ch}
+.badges{display:flex;flex-wrap:wrap;gap:10px}
+.badge{display:inline-flex;flex-direction:column;justify-content:center;min-width:170px;padding:10px 16px;border-radius:12px;background:var(--ink);color:var(--bg);text-decoration:none;line-height:1.2}
+.badge small{font-size:12px;opacity:.8}
+.badge b{font-size:18px}
+.hero .icon{width:min(300px,100%);border-radius:22%;box-shadow:0 18px 40px rgba(30,60,20,.25);justify-self:center}
+section{padding:26px 0}
+section h2{font-size:30px;margin-bottom:14px}
+.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);display:block}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feature{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.feature h3{margin:0 0 6px;font-size:18px}
+.feature p{margin:0;color:var(--muted);font-size:15px}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.contact p{margin:6px 0}
+footer{border-top:1px solid var(--line);margin-top:30px;padding:22px 0 40px;color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:8px 20px}
+footer a{color:var(--muted)}
+.doc{max-width:760px;padding-bottom:40px}
+.doc h1{font-size:clamp(26px,7.5vw,40px);color:var(--green);margin:10px 0 6px;overflow-wrap:break-word;hyphens:auto}
+.doc h2{font-size:24px;margin:26px 0 8px}
+.doc .date{color:var(--muted);margin:0 0 10px}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;gap:18px;padding-top:10px}
+  .hero .icon{width:160px;grid-row:1;justify-self:start}
+  .shots{grid-template-columns:repeat(2,1fr)}
+  .features{grid-template-columns:1fr}
+}
