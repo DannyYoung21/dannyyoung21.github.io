@@ -30,6 +30,15 @@
   </div>
 
   <section>
+    <h2>Trailer</h2>
+    <button class="video" type="button" data-id="MV7cGXL5I3I" aria-label="Play trailer">
+      <img src="img/en_trailer.jpg" alt="" loading="lazy" width="960" height="540">
+      <span class="play" aria-hidden="true"></span>
+    </button>
+    <p class="note">Playing the video loads it from YouTube (Google); your IP address is sent to YouTube.</p>
+  </section>
+
+  <section>
     <h2>Take a look</h2>
     <div class="shots">
       <img src="img/en_01_ernte.jpg" alt="Harvest resources" loading="lazy" width="432" height="864">
@@ -62,5 +71,15 @@
     <a href="#contact">Contact</a>
   </footer>
 </div>
+<script>
+document.querySelectorAll("button.video").forEach(function (b) {
+  b.addEventListener("click", function () {
+    var f = document.createElement("iframe");
+    f.src = "https://www.youtube-nocookie.com/embed/" + b.dataset.id + "?autoplay=1&rel=0";
+    f.title = "Village Legacy Trailer"; f.allow = "autoplay; encrypted-media; picture-in-picture"; f.allowFullscreen = true;
+    b.replaceWith(f);
+  });
+});
+</script>
 </body>
 </html>
