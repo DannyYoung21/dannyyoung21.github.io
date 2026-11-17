@@ -40,6 +40,7 @@
     <p>After launch (and after every video shown), the game loads a video in advance through Google AdMob so that it is ready. It is shown only if you choose it. Even while loading, Google processes, among other things:</p>
     <ul>
       <li>your device’s advertising ID (only for personalized ads; on Android only if you have not deleted it, on iPhone and iPad only if you allow it in Apple’s tracking prompt – see below),</li>
+      <li>a device identifier that applies only to this app or to apps from the same developer (on Android the app set ID, on iPhone and iPad the identifier for vendors), also without consent, for example for frequency capping and fraud prevention,</li>
       <li>the IP address,</li>
       <li>information about the device and the app (model, operating system, language),</li>
       <li>your approximate location, estimated from the IP address,</li>
@@ -64,11 +65,11 @@
     <ul>
       <li>start and end of a level (level number, won, lost, or quit, wave reached, stars, duration, continues used),</li>
       <li>videos offered and watched, continues offered and used,</li>
-      <li>opening the shop and purchases (which product; for purchases through Google Play and the App Store, Firebase also records price and currency automatically),</li>
+      <li>opening the shop and purchases (which product; for purchases through Google Play and the App Store, Firebase may also record price and currency automatically),</li>
       <li>whether the game tips were read,</li>
       <li>running out of lives.</li>
     </ul>
-    <p>In addition, a random ID of the app installation, device type, operating system, language, approximate country, usage time, and events such as first launch, session start, and app update are collected automatically. We do <b>not</b> use the advertising ID for statistics. On iPhone and iPad, the identifier for vendors (IDFV) is not collected either.</p>
+    <p>In addition, a random ID of the app installation, device type, operating system, language, approximate country, usage time, and events such as first launch, session start, and app update are collected automatically. We do <b>not</b> use the advertising ID for statistics. On iPhone and iPad, game stats do not collect the identifier for vendors (IDFV) either.</p>
     <p>Here Google acts as a <b>processor</b> on our behalf (Google’s data processing terms). The legal basis is your consent in the EEA, the UK, and Switzerland (Art. 6(1)(a) GDPR), and otherwise our legitimate interest in a good game (Art. 6(1)(f) GDPR), which you can object to at any time with the switch.</p>
     <p>We use the data only to improve the game (difficulty, help, offers). It is not sold. Google keeps it for at most 14 months.</p>
     <p>If game stats are off or your consent is missing, nothing is sent.</p>
